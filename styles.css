@@ -297,6 +297,11 @@ nav ul li a {
     margin-bottom: 100px;
   }
 
+  #team h4 {
+    text-align: center;
+    margin-bottom: 100px;
+  }
+
   #team .team-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -345,7 +350,108 @@ nav ul li a {
   }
   /* Dashboard Styles */
 
+  
+  /* Footer Styles */
+  footer {
+    position: relative;
+    background: linear-gradient(45deg, #18181B, #3f3f46);
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 500px repeat(1, 1fr);
+    gap: 2rem;
+    border-radius: 12px;
+    
+  }
+  
+  footer .column h4 {
+    color: #fff;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  
+  footer .column > a {
+    color: #ccc;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: block;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+  } 
 
+  footer .column a:hover{
+    color: #7c7d83;
+  }
+  .construction-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    padding: 2rem;
+}
+
+.construction-sign {
+    background: #fff;
+    padding: 2rem 4rem;
+    border-radius: 15px;
+    text-align: center;
+    position: relative;
+    animation: bounce 2s ease-in-out infinite;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    border: 4px solid #000;
+}
+
+.construction-sign h2 {
+    color: #000;
+    font-size: 2.5rem;
+    margin: 1rem 0;
+    text-transform: uppercase;
+}
+
+.construction-sign p {
+    color: #333;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.tools {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes swing {
+    0% { transform: rotate(-30deg); }
+    50% { transform: rotate(30deg); }
+    100% { transform: rotate(-30deg); }
+}
+
+@keyframes swing-reverse {
+    0% { transform: rotate(30deg); }
+    50% { transform: rotate(-30deg); }
+    100% { transform: rotate(30deg); }
+}
+
+.swing {
+    animation: swing 1.5s ease-in-out infinite;
+    transform-origin: bottom center;
+    color: #555;
+}
+
+.swing-reverse {
+    animation: swing-reverse 1.5s ease-in-out infinite;
+    transform-origin: bottom center;
+    color: #555;
+}
   .copyright { 
     max-width: 1200px;
     margin: auto;
