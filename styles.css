@@ -345,40 +345,6 @@ nav ul li a {
   }
   /* Dashboard Styles */
 
-  
-  /* Footer Styles */
-  footer {
-    position: relative;
-    background: linear-gradient(45deg, #18181B, #3f3f46);
-    color: #fff;
-    padding: 40px 0;
-    text-align: center;
-    display: grid;
-    grid-template-columns: 500px repeat(1, 1fr);
-    gap: 2rem;
-    border-radius: 12px;
-    
-  }
-  
-  footer .column h4 {
-    color: #fff;
-    margin-bottom: 2rem;
-    font-size: 1.2rem;
-    font-weight: 700;
-  }
-  
-  footer .column > a {
-    color: #ccc;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    display: block;
-    font-size: 0.8rem;
-    margin-bottom: 1rem;
-  } 
-
-  footer .column a:hover{
-    color: #7c7d83;
-  }
 
   .copyright { 
     max-width: 1200px;
