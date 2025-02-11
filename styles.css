@@ -221,11 +221,11 @@ nav ul li a {
   }
   
   /* Team Section */
-
   #team {
     background-color: #3f3f46;
     border-radius: 12px;
   }
+  
   #team .container {
     text-align: center; /* Center-align the content within the container */
   }
