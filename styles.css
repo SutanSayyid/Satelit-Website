@@ -22,30 +22,27 @@ body {
     margin: 0 auto;
     padding: 0 20px;
   }
-.blur{
-    position : absolute;
-    box-shadow : 0 0 1000px 50px #1d4ed8;
-    z-index : -100;
-}
+  
   /* Header Styles */
 
   header {
-    background-color: rgba(28, 37, 65, 0.95);
+    background-color: #3f3f46;
     backdrop-filter: blur(10px);
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    transition: background-color 0.5s ease-in-out;
+    border-bottom: 0.5px solid #3f3f46;
+    transition: background-color 0.3s ease-in-out;
 }
 
 main {
     padding-top: 50px;
+    background-color: #18181B;
 }
 
 header.scrolled {
-    background-color: rgba(10, 25, 47, 1); /* Full opacity when scrolled */
+    background-color: rgba(63, 63, 70, 1);;
 }
 
 nav {
@@ -80,7 +77,7 @@ nav ul li a {
 
   
   nav ul li a:hover {
-    color: #4fc3f7;
+    color: #7c7d83;
   }
 
   .nav-logo {
@@ -117,7 +114,7 @@ nav ul li a {
 }
 
 .nav-links li a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(50, 53, 64, 0.95);
 }
 
   /* Section Styles */
@@ -128,7 +125,7 @@ nav ul li a {
   }
 
   .section-card {
-    background: rgba(255, 255, 255, 0.05);
+    background: #3f3f46;
     border-radius: 18px;
     padding: 2rem;
     margin: 2rem 0;
@@ -151,7 +148,7 @@ nav ul li a {
   
   /* Button Styles */
   .button {
-    background: linear-gradient(45deg, #4fc3f7, #1a365f);
+    background: linear-gradient(45deg, #303136, #3f3f46);
     border: none;
     border-radius: 8px;
     padding: 12px 24px;
@@ -174,7 +171,7 @@ nav ul li a {
     min-height: 80vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(45deg, #1c2541, #0b132b);
+    background: linear-gradient(45deg, #18181B, #3f3f46);
 }
   
   #hero h1 {
@@ -184,7 +181,7 @@ nav ul li a {
   
   /* About Section */
   #about {
-    background-color: rgba(26, 54, 95, 0.1);
+    background-color: #3f3f46;
     border-radius: 12px;
   }
 
@@ -213,7 +210,7 @@ nav ul li a {
   }
   
   .project-card {
-    background-color: rgba(26, 54, 95, 0.2);
+    background-color: #303136;
     border-radius: 12px;
     padding: 20px;
     transition: transform 0.3s ease;
@@ -285,7 +282,7 @@ nav ul li a {
   /* Footer Styles */
   footer {
     position: relative;
-    background: linear-gradient(45deg, #1c2541, #0b132b);
+    background: linear-gradient(45deg, #18181B, #3f3f46);
     color: #fff;
     padding: 40px 0;
     text-align: center;
@@ -312,7 +309,7 @@ nav ul li a {
   } 
 
   footer .column a:hover{
-    color: #4fc3f7;
+    color: #7c7d83;
   }
 
   .copyright { 
