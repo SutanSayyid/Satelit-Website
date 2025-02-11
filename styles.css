@@ -220,12 +220,74 @@ nav ul li a {
     transform: translateY(-5px);
   }
   
+  /* Document Section Styles */
+.document-list {
+  margin-top: 2rem;
+}
+
+.document-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.document-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; /* Align text to left */
+}
+.document-item:hover {
+  transform: translateX(10px);
+}
+
+.document-info h3 {
+  color: #fff;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem
+}
+
+.document-info p {
+  color: #a1a1aa;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.download-btn {
+  background: #3a506b;
+  color: #ffffff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+  min-width: 140px;
+  text-align: center;
+  /* Vertically center the button text */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+}
+
+.download-btn:hover {
+  background: #3f3f46;
+  transform: scale(1.05);
+}
+
   /* Team Section */
   #team {
     background-color: #3f3f46;
     border-radius: 12px;
   }
-  
+
   #team .container {
     text-align: center; /* Center-align the content within the container */
   }
@@ -291,10 +353,11 @@ nav ul li a {
     color: #fff;
     padding: 40px 0;
     text-align: center;
-    margin-top: 100px;
     display: grid;
-    grid-template-columns: 300px repeat(1, 1fr);
+    grid-template-columns: 500px repeat(1, 1fr);
     gap: 2rem;
+    border-radius: 12px;
+    
   }
   
   footer .column h4 {
