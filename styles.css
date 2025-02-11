@@ -1,0 +1,321 @@
+/* General Styles */
+
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1c2541;
+    color: #e0e0e0;
+  }
+
+  
+  h1, h2, h3 {
+    font-weight: 600;
+    margin: 50;
+  }
+  
+  p {
+    margin: 0;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Header Styles */
+
+  header {
+    background-color: rgba(28, 37, 65, 0.95);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background-color 0.5s ease-in-out;
+}
+
+main {
+    padding-top: 50px;
+}
+
+header.scrolled {
+    background-color: rgba(10, 25, 47, 1); /* Full opacity when scrolled */
+}
+
+nav {
+
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+nav ul {
+  list-style: none; /* removes bullet points */
+  padding: 0; /* removes default padding */
+  margin: 0; /* removes default margins */
+  display: flex; /* enables flexbox for the list items */
+  justify-content: center; /* centers the list items */
+  align-items: center; /* vertically aligns items */
+}
+
+nav ul li {
+  margin: 0 15px; /* adds horizontal spacing between items */
+}
+
+nav ul li a {
+  color: #fff; /* sets the link color to white */
+  text-decoration: none; /* removes underlines */
+  font-size: 16px; /* sets a readable font size */
+}
+
+  
+  nav ul li a:hover {
+    color: #4fc3f7;
+  }
+
+  .nav-logo {
+    max-width: 120px;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+  }
+  
+  .nav-logo img {
+    width: 100%;
+    height: 50px;
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .nav-links li {
+    margin: 0;
+    list-style: none;
+}
+
+.nav-links li a {
+  color: #e0e0e0;
+  text-decoration: none;
+  font-weight: 400;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.nav-links li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+  /* Section Styles */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .section-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 18px;
+    padding: 2rem;
+    margin: 2rem 0;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  }
+
+  section {
+    padding: 80px 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Button Styles */
+  .button {
+    background: linear-gradient(45deg, #4fc3f7, #1a365f);
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-family: "Poppins", sans-serif;
+    color: #ffffff;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 50px;
+    transition: transform 0.3s ease;
+  }
+  
+  .button:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Hero Section */
+  
+  #hero {
+    padding-top: 120px;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(45deg, #1c2541, #0b132b);
+}
+  
+  #hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+  }
+  
+  /* About Section */
+  #about {
+    background-color: rgba(26, 54, 95, 0.1);
+    border-radius: 12px;
+  }
+
+  #about .container {
+    text-align: center; /* Center-align the content within the container */
+  }
+
+  #about h2 {
+    text-align: center; /* Ensure the h2 is centered */
+    margin-bottom: 50px;
+  }
+  
+  /* Projects Section */
+  #projects .container {
+    text-align: center; /* Center-align the content within the container */
+  }
+
+  #projects h2 {
+    text-align: center; /* Ensure the h2 is centered */
+    margin-bottom: 50px;
+  }
+  #projects .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .project-card {
+    background-color: rgba(26, 54, 95, 0.2);
+    border-radius: 12px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Team Section */
+  #team .container {
+    text-align: center; /* Center-align the content within the container */
+  }
+
+  #team h2 {
+    text-align: center; /* Ensure the h2 is centered */
+    margin-bottom: 100px;
+  }
+
+  #team .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .team-member {
+    text-align: center;
+  }
+  
+  .team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  #team .button {
+    display: inline-block; /* Allows text-align to work */
+    margin-top: 100px;    /* Adds space between the team grid and the button */
+  }
+
+  /* Contact Section */
+  #contact .container {
+    text-align: center; /* Center-align the content within the container */
+  }
+
+  #contact form {
+    display: grid;
+    gap: 20px;
+  }
+  
+  #contact input,
+  #contact textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+  }
+
+  #contact .button {
+    display: inline-block; /* Allows text-align to work */
+    margin-top: 50px; 
+  }
+  /* Dashboard Styles */
+
+  
+  /* Footer Styles */
+  footer {
+    position: relative;
+    background: linear-gradient(45deg, #1c2541, #0b132b);
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 300px repeat(1, 1fr);
+    gap: 2rem;
+  }
+  
+  footer .column h4 {
+    color: #fff;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  
+  footer .column > a {
+    color: #ccc;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: block;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+  } 
+
+  footer .column a:hover{
+    color: #4fc3f7;
+  }
+
+  .copyright { 
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem;
+    color: #fff;
+    font-size: 0.8rem;
+    text-align: center;
+  }
