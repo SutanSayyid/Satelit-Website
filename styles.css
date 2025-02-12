@@ -1,14 +1,25 @@
-/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --deep-black: #0D0D0D;
+  --pure-white: #FFFFFF;
+  --pink-gradient: linear-gradient(135deg, #FF6EC7, #FF3CAC, #9D0B6B);
+  --neon-purple: #8B5CF6;
+  --tech-blue: #00D4FF;
+}
 
 body {
     font-family: "Poppins", sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #18181B;
+    background: url('/components/space-bg.jpg') no-repeat center center/cover;
     color: #e0e0e0;
   }
 
-  
   h1, h2, h3 {
     font-weight: 600;
     margin: 50;
@@ -37,7 +48,7 @@ body {
 }
 
 main {
-    padding-top: 50px;
+    padding-top: 100px;
     background-color: #18181B;
 }
 
@@ -45,79 +56,108 @@ header.scrolled {
     background-color: rgba(63, 63, 70, 1);;
 }
 
-nav {
 
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1rem 2rem;
+/* navbar */
+nav {
+  position: fixed;
+  background: transparent; 
+  width: 100%; 
+  padding: 0.1rem; 
   display: flex;
-  justify-content: center;
   align-items: center;
-  padding: 1rem 0;
+  justify-content: space-between; 
+  z-index: 1000;
+  transition: background-color 0.3s ease; 
+}
+
+nav.scrolled {
+  background-color: rgba(0, 0, 0, 0.5); 
+}
+
+
+.nav-logo {
+  max-width: 100px; 
+}
+
+.nav-logo img {
+  width: 100%;
+  height: auto;
 }
 
 nav ul {
-  list-style: none; /* removes bullet points */
-  padding: 0; /* removes default padding */
-  margin: 0; /* removes default margins */
-  display: flex; /* enables flexbox for the list items */
-  justify-content: center; /* centers the list items */
-  align-items: center; /* vertically aligns items */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
 }
 
 nav ul li {
-  margin: 0 15px; /* adds horizontal spacing between items */
+  margin: 0 1rem; 
 }
 
 nav ul li a {
-  color: #fff; /* sets the link color to white */
-  text-decoration: none; /* removes underlines */
-  font-size: 16px; /* sets a readable font size */
+  color: #e0e0e0; 
+  text-decoration: none;
+  font-size: 16px;
+  padding: 0.5rem 1rem; 
+  border-radius: 8px; 
+  transition: all 0.3s ease; 
 }
 
-  
-  nav ul li a:hover {
-    color: #7c7d83;
+nav ul li a:hover {
+  background-color: #FF3CAC; 
+  color: white; 
+}
+
+/* Responsive adjustments  */
+@media (max-width: 768px) {
+  nav {
+      flex-direction: column; 
+      align-items: flex-start; 
+      padding: 0.5rem;
   }
 
   .nav-logo {
-    max-width: 120px;
-    position: absolute;
-    top: 10px;
-    left: 20px;
-  }
-  
-  .nav-logo img {
-    width: 100%;
-    height: 50px;
+      margin-bottom: 0.5rem;
+      position: relative; 
+
   }
 
-  .nav-links {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 2rem;
+  nav ul {
+      flex-direction: column; 
+      align-items: flex-start;
   }
 
-  .nav-links li {
-    margin: 0;
-    list-style: none;
+  nav ul li {
+      margin: 0.5rem 0; 
+  }
+}
+/* Section Styles */
+section {
+  padding: 80px 0;
 }
 
-.nav-links li a {
-  color: #e0e0e0;
-  text-decoration: none;
-  font-weight: 400;
-  padding: 0.5rem 1rem;
+/* Button Styles */
+.button {
+  background: linear-gradient(45deg, #FF6EC7, #FF3CAC, #9D0B6B);
+  border: none;
   border-radius: 8px;
-  transition: all 0.3s ease;
+  padding: 12px 24px;
+  color: #FFFFFF;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.3s ease, background 0.3s ease;
 }
 
-.nav-links li a:hover {
-    background-color: rgba(50, 53, 64, 0.95);
+.button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(45deg, #FF3CAC, #9D0B6B, #FF6EC7);
 }
 
-  /* Section Styles */
+
+  /* Section Styles*/
   .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -165,19 +205,27 @@ nav ul li a {
   }
   
   /* Hero Section */
-  
-  #hero {
-    padding-top: 120px;
-    min-height: 80vh;
-    display: flex;
-    align-items: center;
-    background: linear-gradient(45deg, #18181B, #3f3f46);
+ /* Hero Section */
+#hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url('/components/space-bg.jpg') no-repeat center center/cover;
+  text-align: center;
+  padding-top: 60px;
 }
-  
-  #hero h1 {
-    font-size: 3em;
-    margin-bottom: 20px;
-  }
+
+#hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+#hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
   
   /* About Section */
   #about {
@@ -451,6 +499,22 @@ nav ul li a {
     animation: swing-reverse 1.5s ease-in-out infinite;
     transform-origin: bottom center;
     color: #555;
+}
+
+/* Social Links */ 
+.social-links {
+  margin-top: 50px;
+}
+
+.social-links a {
+  color: #FFFFFF;
+  margin-right: 15px;
+  font-size: 2rem;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #FF6EC7;
 }
   .copyright { 
     max-width: 1200px;
