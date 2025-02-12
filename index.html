@@ -7,6 +7,7 @@
     <title>Satelit Araştırma Merkezi - Home</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <header>
@@ -14,7 +15,7 @@
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#team">Team</a></li>
+                <li><a href="#team">Our Team</a></li>
                 <li><a href="#contact">Feedback</a></li>
                 <li><a href="dashboard.html">Dashboard</a></li>
             </ul>
@@ -71,17 +72,17 @@
                     <div class="team-member">
                         <img src="components/arya.jpg" alt="Team Member 1">
                         <h3>Arya Alifa Mukti</h3>
-                        <p>Founder</p>
+                        <p>Editor in Chief</p>
                     </div>
                     <div class="team-member">
                         <img src="components/fecri.jpg" alt="Team Member 2">
                         <h3>Fajri Destuano</h3>
-                        <p>Co-Founder and Research Director</p>
+                        <p>Research Director</p>
                     </div>
                     <div class="team-member">
                         <img src="components/sayyid.jpg" alt="Team Member 3">
                         <h3>Sayyid Ash Shiddiqie</h3>
-                        <p>Co-Founder and Data & Reporting Director</p>
+                        <p>Data & Reporting Director</p>
                     </div>
                 </div>
                 <a href="team.html" class="button">Meet the Team</a>
@@ -91,12 +92,16 @@
         <section id="contact">
             <div class="container">
                 <h2>Give Us Feedback</h2>
-                <form action="contact.html" method="POST">
+                <form action="#contact" method="POST">
                     <input type="text" name="name" placeholder="Your Name" required>
                     <input type="email" name="email" placeholder="Your Email" required>
                     <textarea name="message" placeholder="Your Message" required></textarea>
                     <button type="submit" class="button">Send Message</button>
                 </form>
+                <div class="social-links">
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/satelit.sakarya" class="social-icon"><i class="fab fa-instagram"></i></a>
+                </div>
             </div>
         </section>
     </main>
